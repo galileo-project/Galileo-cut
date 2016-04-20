@@ -21,6 +21,6 @@ void    link_add(link_t*, node_t*);
 void    link_add_raw(link_t*, void*);
 node_t  *link_head(link_t*);
 node_t  *link_tail(link_t*);
-void    link_free(link_t*);
+int     link_free(link_t*);
 
 #endif //CUT_LINK_H_

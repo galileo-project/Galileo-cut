@@ -17,17 +17,17 @@ _result_t _result_new(int code, char *name) {
     if(result == NULL)
         return NULL;
         
-    result->mod_name = NULL;
-    result->_code     = 0;
+    result->_mod_name = NULL;
+    result->_code     = SUCCESS;
     
     return result;
 }
 
 static void _result_print(_result_t *result) {
-    if(result->_code != 0) {
-        LOG_ERROR(result->mod_name);
+    if(result->_code != SUCCESS) {
+        LOG_ERROR(result->_mod_name);
     } else {
-        LOG_SUCCESS(result->mod_name);
+        LOG_SUCCESS(result->_mod_name);
     }
 }
 
@@ -67,7 +67,7 @@ int testing_test(testing_t *testing, int argc, char** argv) {
     elf = elf_begin(fd, ELF_C_READ, NULL);
     if(elf == NULL) {
         close(fd);
-        return 1;
+        return ERROR;
     }
     
     //Retrieve symbol table.
@@ -94,17 +94,17 @@ int testing_test(testing_t *testing, int argc, char** argv) {
             _result_t *result = _result_new(ret, _func_name_to_mod(func_name);
             link_add_raw(testing->_result, result);
             if(ret != 0)
-                testing->_code = 1;
+                testing->_code = ERROR;
         }
 	}
     elf_end(elf);
     close(fd);
-    return 0;
+    return SUCCESS;
 }
 
 int testing_result(testing_t *testing) {
     if(testing == NULL)
-        return 1
+        return ERROR;
     
     return testing->_code;
 }

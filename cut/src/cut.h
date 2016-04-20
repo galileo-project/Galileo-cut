@@ -45,7 +45,7 @@
 typedef int (*test_f)(void);
 
 typedef struct _result_s {
-    char *mod_name;
+    char *_mod_name;
     int   _code;
 } _result_t;
 

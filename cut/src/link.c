@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "cut.h"
 #include "link.h"
 
 /****************************
@@ -40,7 +41,7 @@ int link_add(link_t *link, node_t *node) {
     if(link_len(0) == 0) {
         link->head = node;
         link->tail = node;
-        return 0;
+        return SUCCESS;
     } 
     
     node_t *tmp;
@@ -49,7 +50,7 @@ int link_add(link_t *link, node_t *node) {
     tmp->next  = node;
     link->tail = node;
     
-    return 0;
+    return SUCCESS;
 }
 
 void link_add_raw(link_t *link, void *data) {
@@ -90,7 +91,7 @@ node_t *link_tail(link_t *link) {
 
 int link_free(link_t *link) {
     if(link_len(link) == 0)
-        return 1;
+        return ERROR;
     
     link_t *tmp;
     if((tmp = link_head(link)) != NULL) {
@@ -98,5 +99,5 @@ int link_free(link_t *link) {
     }
     
     free(link);
-    return 0;
+    return SUCCESS;
 }
