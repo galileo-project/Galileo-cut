@@ -125,7 +125,7 @@ int testing_result(testing_t *testing) {
 
 static char *_func_name_to_mod(char *func_name) {
     size_t func_name_len = strlen(func_name);
-    size_t test_kw_len   = sizeof(TESTING_KW) - 1
+    size_t test_kw_len   = sizeof(TESTING_KW) - 1;
     size_t mod_name_len  = func_name_len - test_kw_len;
     
     char *mod_name = (char*)malloc(mod_name_len * sizeof(char));
