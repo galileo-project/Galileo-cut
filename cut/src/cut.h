@@ -34,7 +34,7 @@
             return 1; \
     } while(0)
 
-#define TESTING_KW "testing_"
+#define TESTING_KW "test_"
 
 //Status Message
 #define SUCCESS 0

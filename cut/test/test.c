@@ -8,10 +8,10 @@ int main(int argv, char **args) {
     return testing_result(testing);
 }
 
-int testing_err(void) {
+int test_err(void) {
     return 1;
 }
 
-int testing_success(void) {
+int test_success(void) {
     return 0;
 }
