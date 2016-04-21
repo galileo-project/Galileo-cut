@@ -1,7 +1,5 @@
 # Galileo-cut
 
-[![Build Status](https://travis-ci.org/ColeChan/Galileo-cut.svg?branch=dev)](https://travis-ci.org/ColeChan/Galileo-cut)
-
 ### Dependency
 
 * elfutils-libelf-devel
