@@ -3,8 +3,10 @@ language: c
 install-before:
     - sudo apt-get install -y libelf1 libelf-dev
 script:
+    - find /usr -ilname libelf*
     - export LIBRARY_PATH=$LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
     - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
+    - export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include
     - cd cut &&  make test
 notifications:
     email: false
