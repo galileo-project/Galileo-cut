@@ -3,7 +3,7 @@ language: c
 before_install:
     - sudo apt-get install -y elfutils libelf-dev
 env:
-    - export LIBELF_LIBS="-L /usr/lib/* -lelf"
+    - LIBELF_LIBS="-L /usr/lib/* -lelf"
 script:
     cd cut &&  make test
 notifications:
