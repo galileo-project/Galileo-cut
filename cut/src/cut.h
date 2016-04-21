@@ -42,7 +42,7 @@
 *           Test            *
 *****************************/
 
-typedef int (*test_f)(void);
+typedef int (*testing_f)(void);
 
 typedef struct _result_s {
     char *_mod_name;

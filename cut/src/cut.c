@@ -55,7 +55,7 @@ int testing_test(testing_t *testing, int argc, char** argv) {
     Elf_Scn     *scn = NULL;
     GElf_Shdr   shdr;
     Elf_Data    *data = NULL;
-    test_f      test_func;    
+    testing_f      test_func;    
     int         fd, count;
     int         ret;
     int         index;
@@ -88,7 +88,7 @@ int testing_test(testing_t *testing, int argc, char** argv) {
         func_name = elf_strptr(elf, shdr.sh_link, sym.st_name);
         
         if (!strncasecmp(TESTING_KW, func_name, strlen(TESTING_KW))) {
-            test_func = (test_f)(sym.st_value);
+            test_func = (testing_f)(sym.st_value);
             ret = test_func();
             
             _result_t *result = _result_new(ret, _func_name_to_mod(func_name);
@@ -115,7 +115,7 @@ int testing_result(testing_t *testing) {
 }
 
 /************************
-*           Utils       *
+*         Utils         *
 *************************/
 
 static char *_func_name_to_mod(char *func_name) {
