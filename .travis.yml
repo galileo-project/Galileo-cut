@@ -1,5 +1,7 @@
 sudo: required
 language: c
+install:
+    apt-get install -y libelf-dev
 script:
     cd cut &&  make test
 notifications:
