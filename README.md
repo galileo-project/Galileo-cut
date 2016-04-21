@@ -52,4 +52,4 @@ Install dependncy:
     
 ### License
 
-`C language unit test lib` project release under [MIT LICENSE](https://github.com/tor4z/Galileo-cut/blob/master/LICENSE)
+`C language unit test framework` project release under [MIT LICENSE](https://github.com/tor4z/Galileo-cut/blob/master/LICENSE)
