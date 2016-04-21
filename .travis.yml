@@ -2,11 +2,11 @@ sudo: required
 language: c
 before_install:
     - sudo apt-get install -y libelf-dev
+env:
+     global:
+        - export LIBRARY_PATH=$LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
+        - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
 script:
-    - ls /usr/include/lib*
-    - export LIBRARY_PATH=$LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
-    - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
-    - export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include
     - cd cut &&  make test
 notifications:
     email: false
