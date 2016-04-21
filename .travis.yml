@@ -2,8 +2,10 @@ sudo: required
 language: c
 install-before:
     - sudo apt-get install -y libelf1 libelf-dev
+env:
+    - LIBRARY_PATH=$LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
+    - LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
 script:
-    - sudo find /usr -ilname libelf*
     - cd cut &&  make test
 notifications:
     email: false
