@@ -13,7 +13,7 @@ static char       *_func_name_to_mod(char*);
 *      Result function   *
 **************************/
 
-_result_t _result_new(int code, char *name) {
+_result_t *_result_new(int code, char *name) {
     _result_t *result = (_result_t*)malloc(sizeof(_result_t));
     if(result == NULL)
         return NULL;
@@ -37,7 +37,7 @@ static void _result_print(_result_t *result) {
 **************************/
 
 testing_t *testing_new() {
-    testting_t *testing = (testing_t*)malloc(sizeof(testing_t));
+    testing_t *testing = (testing_t*)malloc(sizeof(testing_t));
     if(testing == NULL)
         return  NULL;
         
@@ -94,8 +94,9 @@ int testing_test(testing_t *testing, int argc, char** argv) {
             
             _result_t *result = _result_new(ret, _func_name_to_mod(func_name);
             link_add_raw(testing->_result, result);
-            if(ret != 0)
+            if(ret != 0) {
                 testing->_code = ERROR;
+            }
         }
 	}
     elf_end(elf);
