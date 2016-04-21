@@ -1,9 +1,7 @@
 sudo: required
 language: c
 before_install:
-    - sudo apt-get install -y elfutils libelf-dev
-env:
-    - LIBELF_LIBS="-L /usr/lib/* -lelf"
+    - sudo apt-get install -y elfutils libelf1 libelf-dev
 script:
     cd cut &&  make test
 notifications:
