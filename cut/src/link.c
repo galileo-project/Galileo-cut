@@ -43,10 +43,10 @@ int link_add(link_t *link, node_t *node) {
     } 
     
     node_t *tmp;
-    tmp = link->tail;
+    tmp = link->head;
     node->pre  = tmp;
     tmp->next  = node;
-    link->tail = node;
+    link->head = node;
     
     return SUCCESS;
 }
@@ -82,7 +82,8 @@ node_t *link_tail(link_t *link) {
     
     node_t *ret;    
     ret = link->tail;
-    link->tail = ret->pre;
+    link->tail = ret->next;
+    link->tail->pre = NULL;
     --(link->len);
     return ret;
 }
