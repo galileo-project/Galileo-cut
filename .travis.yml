@@ -3,7 +3,7 @@ language: c
 install-before:
     - sudo apt-get install -y libelf1 libelf-dev
 script:
-    - find . -ilname libelf
+    - cd /usr && find . -ilname libelf
     - cd cut &&  make test
 notifications:
     email: false
