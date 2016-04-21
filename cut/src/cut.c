@@ -92,7 +92,7 @@ int testing_test(testing_t *testing, int argc, char** argv) {
             test_func = (testing_f)(sym.st_value);
             ret = test_func();
             
-            _result_t *result = _result_new(ret, _func_name_to_mod(func_name);
+            _result_t *result = _result_new(ret, _func_name_to_mod(func_name));
             link_add_raw(testing->_result, result);
             if(ret != 0) {
                 testing->_code = ERROR;
