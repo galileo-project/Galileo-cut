@@ -45,6 +45,7 @@
 *****************************/
 
 typedef int (*testing_f)(void);
+typedef struct link_s link_t;
 
 typedef struct _result_s {
     char *_mod_name;
