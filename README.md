@@ -6,23 +6,19 @@
 
 * elfutils-libelf-devel
 
-install dependncy:
+Install dependncy:
 
-    yum install -y elfutils-libelf-devel
+    sudo yum install -y elfutils-libelf-devel        //for Redhat or CentOS etc.
+    sudo apt-get install -y libelf-dev               //for Ubuntu or Debian etc.
     
 ### Build
 
-build:
-    
-    make
-    
-test:
-
-    make test
-    
-install:
-    
-    make install
+    Build:
+        make
+    Test:
+        make test
+    Install:
+        make install
     
 ### Usage
 
