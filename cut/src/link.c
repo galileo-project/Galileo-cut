@@ -34,20 +34,18 @@ link_t *link_new(void) {
 }
 
 int link_add(link_t *link, node_t *node) {   
-    ++(link->len);
-    
-    if(link_len(0) == 0) {
+    if(link_len(link) == 0) {
         link->head = node;
         link->tail = node;
-        return SUCCESS;
-    } 
+    } else {
+        node_t *tmp;
+        tmp = link->head;
+        node->pre  = tmp;
+        tmp->next  = node;
+        link->head = node;
+    }
     
-    node_t *tmp;
-    tmp = link->head;
-    node->pre  = tmp;
-    tmp->next  = node;
-    link->head = node;
-    
+    ++(link->len);
     return SUCCESS;
 }
 
