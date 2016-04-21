@@ -81,7 +81,8 @@ node_t *link_tail(link_t *link) {
     node_t *ret;    
     ret = link->tail;
     link->tail = ret->next;
-    link->tail->pre = NULL;
+    if(link->tail != NULL)
+        (link->tail)->pre = NULL;
     --(link->len);
     return ret;
 }
