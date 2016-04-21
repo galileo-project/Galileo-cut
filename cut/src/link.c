@@ -21,14 +21,14 @@ node_t *node_new(void *data) {
 /****************************
 *       Link function       *
 *****************************/
-link_t *link_new() {
+link_t *link_new(void) {
     link_t *link = (link_t*)malloc(sizeof(link_t));
     if(link == NULL)
         return NULL;
     
     link->len  = 0;
     link->head = NULL;
-    link->tail = NULL
+    link->tail = NULL;
     
     return link;
 }
@@ -53,15 +53,15 @@ int link_add(link_t *link, node_t *node) {
     return SUCCESS;
 }
 
-void link_add_raw(link_t *link, void *data) {
+int link_add_raw(link_t *link, void *data) {
     node_t *node = node_new(data);
     if(node == NULL)
-        return NULL;
+        return 1;
     return link_add(link, node);
 }
 
 size_t link_len(link_t *link) {
-    if(len == NULL)
+    if(len == 0)
         return 0;
         
     return link->len;
@@ -71,7 +71,7 @@ node_t *link_head(link_t* link) {
     if(link_len(link) == 0)
         return NULL;
     
-    link_t *ret;    
+    node_t *ret;    
     ret = link->head;
     link->head = ret->next;
     --(link->len);
@@ -82,7 +82,7 @@ node_t *link_tail(link_t *link) {
     if(link_len(link) == 0)
         return NULL;
     
-    link_t *ret;    
+    node_t *ret;    
     ret = link->tail;
     link->tail = ret->pre;
     --(link->len);
@@ -93,7 +93,7 @@ int link_free(link_t *link) {
     if(link_len(link) == 0)
         return ERROR;
     
-    link_t *tmp;
+    node_t *tmp;
     if((tmp = link_head(link)) != NULL) {
         free(tmp);
     }
