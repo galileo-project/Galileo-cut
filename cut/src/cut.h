@@ -24,13 +24,14 @@
         printf("%s\n", msg); \
     } while(0)
 
-#define ASSERT_BOOL(val) do { \n
+#define ASSERT_BOOL(val) do { \
         if(!(val)) \
             return 1; \
     } while(0)
 
-#define ASSERT_EQ(lhs, rhs) do { \n
-        ASSERT_BOOL(lhs == rhs); \
+#define ASSERT_EQ(lhs, rhs) do { \
+        if((lhs) != (rhs)) \
+            return 1; \
     } while(0)
 
 #define TESTING_KW "testing_"
