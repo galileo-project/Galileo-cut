@@ -13,7 +13,7 @@ node_t *node_new(void *data) {
         
     node->pre  = NULL;
     node->next = NULL;
-    node->data = NULL;
+    node->data = data;
     
     return node;
 }
