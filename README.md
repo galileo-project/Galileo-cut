@@ -45,6 +45,8 @@ Install dependncy:
         ASSERT_EQ(1,4);
     }
     
+    gcc test.c -lelf -lcut              //compile
+    
 **IMPORTANT:**
 
 1. Unit testing function must start with `test_` and follow your testing_mod name
