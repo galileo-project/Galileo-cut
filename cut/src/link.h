@@ -17,8 +17,8 @@ typedef struct link_s {
 
 link_t  *link_new(void);
 size_t  link_len(link_t*);
-int    link_add(link_t*, node_t*);
-int    link_add_raw(link_t*, void*);
+int     link_add(link_t*, node_t*);
+int     link_add_raw(link_t*, void*);
 node_t  *link_head(link_t*);
 node_t  *link_tail(link_t*);
 int     link_free(link_t*);

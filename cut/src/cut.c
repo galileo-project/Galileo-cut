@@ -59,7 +59,7 @@ int testing_test(testing_t *testing, int argc, char** argv) {
     Elf_Scn     *scn = NULL;
     GElf_Shdr   shdr;
     Elf_Data    *data = NULL;
-    testing_f      test_func;    
+    testing_f   test_func;    
     int         fd, count;
     int         ret;
     int         index;
