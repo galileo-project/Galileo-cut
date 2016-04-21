@@ -1,5 +1,5 @@
 CC              = gcc
-CFLAGS          = -I src -Wall -lelf
+CFLAGS          = -I src -Wall -lelf -g
 AR              = ar
 ARFLAGES        = -crv
 NAME            = cut
