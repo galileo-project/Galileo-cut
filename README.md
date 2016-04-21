@@ -14,13 +14,16 @@ Install dependncy:
 ### Build
 
     Build:
-        make
+        cd cut && make
     Test:
-        make test
+        cd cut && make test
     Install:
-        make install
+        cd cut && make install
     
 ### Usage
+
+    <you_testing_file.c>
+
 
     #include "cut.h"
 
