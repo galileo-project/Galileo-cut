@@ -9,6 +9,8 @@ int main(int argv, char **args) {
     
     if(ret != 0)
         return 0;
+    else
+        return 1;
 }
 
 int test_err(void) {
