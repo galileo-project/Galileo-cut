@@ -105,6 +105,11 @@ int testing_test(testing_t *testing, int argc, char** argv) {
 int testing_result(testing_t *testing) {
     if(testing == NULL)
         return ERROR;
+        
+    node_t *node;
+    while((node = link_tail(testing->_result)) != NULL) {
+        _result_print(node->data);
+    }
     
     return testing->_code;
 }
