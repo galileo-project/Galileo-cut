@@ -52,7 +52,7 @@ int link_add(link_t *link, node_t *node) {
 int link_add_raw(link_t *link, void *data) {
     node_t *node = node_new(data);
     if(node == NULL)
-        return 1;
+        return ERROR;
     return link_add(link, node);
 }
 
