@@ -1,7 +1,7 @@
 sudo: required
 language: c
 install-before:
-    - sudo apt-get install -y libelf1 libelf-dev elfutils
+    - sudo apt-get install -y libelf-dev
 script:
     - ls /usr/include/lib*
     - export LIBRARY_PATH=$LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
