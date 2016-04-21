@@ -128,7 +128,7 @@ static char *_func_name_to_mod(char *func_name) {
     size_t mod_name_len  = func_name_len - sizeof(TESTING_KW);
     
     char *mod_name = (char*)malloc(mod_name_len * sizeof(char));
-    strncpy(mod_name, func_name + func_name_len, mod_name_len);
+    strncpy(mod_name, func_name + sizeof(TESTING_KW), mod_name_len);
     
     return mod_name;
 }

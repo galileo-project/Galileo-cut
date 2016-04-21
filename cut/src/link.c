@@ -65,7 +65,7 @@ size_t link_len(link_t *link) {
     return link->len;
 }
 
-node_t *link_head(link_t* link) {
+node_t *link_head(link_t *link) {
     if(link_len(link) == 0)
         return NULL;
     
