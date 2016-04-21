@@ -25,7 +25,7 @@ Install dependncy:
     <your_testing_file.c>
 
 
-    #include "cut.h"
+    #include <cut/cut.h>
 
     int main(int argv, char **args) {
         testing_t *testing = testing_new();
