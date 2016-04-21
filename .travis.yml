@@ -1,0 +1,6 @@
+sudo: required
+language: c
+script:
+    cd cut &&  make test
+notifications:
+    email: false
