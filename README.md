@@ -22,7 +22,7 @@ Install dependncy:
     
 ### Usage
 
-    <you_testing_file.c>
+    <your_testing_file.c>
 
 
     #include "cut.h"
@@ -33,7 +33,7 @@ Install dependncy:
         return testing_result(testing);
     }
 
-    int test_mod_name(void) {       // mod_name is you unit mod name
+    int test_mod_name(void) {       // mod_name is your unit mod name
         return 1;                   // return 0 if success else return 1 
     }
     
@@ -47,7 +47,7 @@ Install dependncy:
     
 **IMPORTANT:**
 
-1. Unit testing function must start with `test_` and follow you mod name
+1. Unit testing function must start with `test_` and follow your testing_mod name
 2. Testing function declara like `int test_mod_name(void)`
     
 ### License
