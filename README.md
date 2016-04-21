@@ -46,6 +46,11 @@ install:
         ASSERT_EQ(1,4);
     }
     
+**IMPORTANT:**
+
+1. Unit testing function must start with `test_` and follow you mod name
+2. Testing function declara like `int test_mod_name(void)`
+    
 ### License
 
 `C language unit test lib` project release under [MIT LICENSE](https://github.com/tor4z/Galileo-cut/blob/master/LICENSE)
