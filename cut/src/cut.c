@@ -2,6 +2,8 @@
 #include <gelf.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <stdlib>
+#include <string>
 #include "link.h"
 #include "cut.h"
 
