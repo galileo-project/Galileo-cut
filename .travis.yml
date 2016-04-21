@@ -1,8 +1,7 @@
 sudo: required
 language: c
-before_install:
-    - sudo apt-get install -y elfutils libelf1 libelf-dev
 script:
-    cd cut &&  make test
+    - sudo apt-get install -y libelf1 libelf-dev
+    - cd cut &&  make test
 notifications:
     email: false
