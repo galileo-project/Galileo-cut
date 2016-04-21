@@ -1,0 +1,12 @@
+sudo: required
+language: c
+before_install:
+    - sudo apt-get install -y libelf-dev
+env:
+    global:
+        - LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH    
+        - LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LIBRARY_PATH
+script:
+    - cd cut &&  make test
+notifications:
+    email: false
