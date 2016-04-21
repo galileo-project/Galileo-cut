@@ -55,7 +55,7 @@ typedef struct testing_s {
     int     _code;
 } testing_t;
 
-testint_t *testing_new();
+testing_t *testing_new();
 int       testing_test(testing_t*, int, char**);
 int       testing_result(testing_t*);
 
