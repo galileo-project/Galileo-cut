@@ -5,7 +5,10 @@ int main(int argv, char **args) {
     if(testing == NULL)
         return 1;
     testing_test(testing, argv, args);
-    return testing_result(testing);
+    int ret testing_result(testing);
+    
+    if(ret != 0)
+        return 0;
 }
 
 int test_err(void) {
@@ -14,4 +17,12 @@ int test_err(void) {
 
 int test_success(void) {
     return 0;
+}
+
+int test_assert(void) {
+    ASSERT_BOOL(0);
+}
+
+int test_assert(void) {
+    ASSERT_EQ(1,4);
 }
