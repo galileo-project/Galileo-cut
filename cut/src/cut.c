@@ -2,6 +2,7 @@
 #include <gelf.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include "link.h"
 #include "cut.h"
 
 static _result_t  *_result_new(int, char*);
