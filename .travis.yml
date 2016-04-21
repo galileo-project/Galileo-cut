@@ -1,6 +1,6 @@
 sudo: required
 language: c
-install-before:
+before_install:
     - sudo apt-get install -y libelf-dev
 script:
     - ls /usr/include/lib*
