@@ -33,11 +33,7 @@ link_t *link_new(void) {
     return link;
 }
 
-int link_add(link_t *link, node_t *node) {
-    node_t *node = node_new(data);
-    if(node == NULL)
-        return 1;
-    
+int link_add(link_t *link, node_t *node) {   
     if(link_len(0) == 0) {
         link->head = node;
         link->tail = node;
@@ -61,7 +57,7 @@ int link_add_raw(link_t *link, void *data) {
 }
 
 size_t link_len(link_t *link) {
-    if(len == 0)
+    if(link == NULL)
         return 0;
         
     return link->len;
