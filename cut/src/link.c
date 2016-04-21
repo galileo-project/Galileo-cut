@@ -45,6 +45,7 @@ int link_add(link_t *link, node_t *node) {
     node->pre  = tmp;
     tmp->next  = node;
     link->tail = node;
+    ++(link->len);
     
     return SUCCESS;
 }
