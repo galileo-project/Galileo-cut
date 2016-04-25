@@ -6,6 +6,6 @@ env:
     global:
         - LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LIBRARY_PATH
 script:
-    - cd cut &&  make test
+    - make test
 notifications:
     email: false

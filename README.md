@@ -12,11 +12,11 @@ Install dependncy:
 ### Build
 
     Build:
-        cd cut && make
+        make
     Test:
-        cd cut && make test
+        make test
     Install:
-        cd cut && make install
+        make install
     
 ### Usage
 
