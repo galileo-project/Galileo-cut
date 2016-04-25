@@ -1,0 +1,13 @@
+author: galileo-project
+description: c unit test framework
+email: vwenjie@hotmail.com
+git_url: git@github.com:tor4z/galileo-project/Galileo-cut.git
+language: C
+name: Galileo-cut
+version: 0.1
+
+install:
+  - make install
+
+test:
+  - make test
